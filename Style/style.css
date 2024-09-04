@@ -1,0 +1,458 @@
+/*-------ESTILOS GENERALES-------*/
+
+*{  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+/*-------PANTALLA MOVIL-------*/
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "cabecera navegador"
+    "contenido contenido"
+    "pie pie";
+    grid-template-rows: 100px auto;
+    grid-template-columns: 100px 1fr;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*-------TEXTOS-------*/
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em; text-align: center;}
+h3{ font-size: 2em;}
+p{ font-size: 1.5em; text-align: center;}
+.color-acento{ color: rgb(28, 206, 28);}
+
+/*-------BOTONES-------*/
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    margin: 50px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: rgb(28, 206, 28);
+}
+button:hover{
+    background-color: rgb(30, 155, 30);
+}
+
+/*-------ESTILOS POR SECCIONES-------*/
+
+/*-----------CABECERA-------*/
+header{
+    grid-area: cabecera;
+    background-color: rgb(247, 232, 221);
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+
+nav{
+    grid-area: navegador;
+    background-color: rgb(247, 232, 221);
+    font-size: 1.1em;
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav a{
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 5px;
+}
+
+nav a:hover{ 
+    color: rgb(30, 155, 30);
+    text-decoration: underline;
+}
+
+#button_in{
+    text-decoration: underline rgb(113, 199, 113) solid 2px;
+    text-shadow: 2px 2px 2px rgb(143, 204, 143);
+
+}
+/*--------SECCIONES DEL MAIN-------*/
+main{
+    grid-area: contenido;
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ) ,url(../Assets/image/shutterstock_333578117-1280x640.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{ 
+    color: white;
+    margin: 50px 20px;
+}
+
+#descripcion{
+    text-align: center;
+    padding: 200px 12px;
+    background-color: white;
+}
+
+/*---------CARTAS----------*/
+
+#cartas{
+    background-color: rgb(133, 111, 17);
+    text-align: center;
+    padding:0px;
+    color: white;
+    display: block;
+    border-radius: 15px;
+}
+#info_restaurante{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ) 
+    ,url(../Assets/image/restaurante.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 40px;
+}
+
+#info_catering{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ) 
+    ,url(../Assets/image/catering_aire_libre.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 40px;
+}
+
+#caracteristicas{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#titulo-caracteristicas h2{
+      padding: 50px;
+      margin-top: 10%;
+}
+
+#caracteristicas img{
+    display: none;
+}
+
+#conclusion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ) ,url(../Assets/image/platillo-gourmet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: white;
+}
+
+
+
+/*------GALERIA DE IMAGENES-----*/
+
+.galeria h2{
+    padding: 30px;
+}
+
+.galeria p{
+    padding: 30px 20px;
+}
+.galeria_fotos img{
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+/*--------RESERVACIONES--------*/
+
+#fondo-reservas{
+        background-image: url(../Assets/image/4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 30%;
+}
+
+#form_reserva{
+    
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    );
+    color: white;
+    padding: 30px;
+    box-shadow: 2px 2px 10px rgba(0.5, 0.5, 0.5, 0.5);
+}
+
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+    font-size: 0.75em;
+    color: #999;
+    top: -5px;
+    -webkit-transition: all 0.225s ease;
+    transition: all 0.225s ease;
+}
+
+.styled-input {
+    float: left;
+    width: 293px;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 4px;
+}
+
+.styled-input label {
+    color: #999;
+    padding: 1.3rem 30px 1rem 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.styled-input.wide { 
+    width: 650px;
+    max-width: 100%;
+}
+
+input,
+textarea {
+    padding: 30px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #2d2d2d;
+    color: white;
+    border-radius: 4px;
+}
+
+input:focus,
+textarea:focus { outline: 0; }
+
+input:focus ~ span,
+textarea:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}
+
+textarea {
+    width: 100%;
+    min-height: 15em;
+}
+
+#fecha{ color: #999;}
+#hora{ color: #999;}
+#reset-btn{
+    float: right;
+}
+
+
+@media only screen and (max-width: 481px){
+    #fondo-reservas{
+        padding: 0;
+    }
+    #form_reserva{
+        width: 100%;
+        padding: 0%;
+    }
+    .styled-input {
+        width:100%;
+    }
+    .submit-btn {
+        width:100%;
+        float: none;
+        text-align:center;
+    }   
+}
+
+/*-----CONFIRMACION DE RESERVA----*/
+
+#confirmacion{
+    text-align: center;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ) ,url(../Assets/image/1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    color: white;
+    padding: 150px;
+}
+
+/*********** CONTACTO **********/
+#contacto{
+    text-align: center;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ) ,url(../Assets/image/1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100%;
+    color: white;
+}
+#contacto img{
+    width: 50%;
+}
+
+/*------Tablets-------*/
+
+@media (min-width: 481px) and (max-width: 1024px){
+    body{
+        min-height: 100vh;
+        display: grid;
+        grid-template-areas: 
+        "cabecera navegador"
+        "contenido contenido"
+        "pie pie";
+        grid-template-rows: 100px auto 100px;
+        grid-template-columns: 100px 1fr;
+    }
+    
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 40px;
+    }
+
+    .galeria_fotos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .galeria_fotos img{
+        margin: 5px 5px;
+        padding: 3px;
+    }
+    
+    
+}
+
+/*----------ORDENADOR---------*/
+@media (min-width: 1025px) {
+    body{
+        min-height: 100vh;
+        display: grid;
+        grid-template-areas: 
+        "cabecera navegador"
+        "contenido contenido"
+        "pie pie";
+        grid-template-rows: 100px auto 100px;
+        grid-template-columns: 100px 1fr;
+    }
+    
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    ul li{
+        margin: 30px;
+    }
+
+    #descripcion p{
+        margin: 40px 40px;
+    }
+    
+    #cartas{
+        display: flex;
+    }
+
+    #caracteristicas{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    #caracteristicas img{
+        display: block;
+        width: 300px;
+        height: 400px;
+    }
+
+    .galeria_fotos img{
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    }
+
+    .galeria_fotos{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+}
+
+/*-----PIE DE PAGINA-------*/
+footer{
+    grid-area: pie;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    color: rgb(146, 146, 146);
+}
+
+.redes{
+    width: 62px;
+    height: 49px;
+}
